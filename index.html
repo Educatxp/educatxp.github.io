@@ -19,7 +19,7 @@
 
 <meta charset="UTF-8">
 <meta name="description" content="A specilized search engine designed to index resources for online education">
-<meta name="keywords" content="Courses, MOOC, Search Engine, Education, Online Courses, Online Education">
+<meta name="keywords" content="Courses, MOOC, Search Engine, Education, Online Courses">
 <link rel="icon" href="https://i.imgur.com/gms4jrB.png" type="image/png" sizes="16x16">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -61,7 +61,7 @@ form.example button:hover {
   color: white;
 }
 
-.fa-youtube {
+.fa-envelope {
   background: #ff6347;
   color: white;
 }
@@ -83,20 +83,136 @@ html, body {
 img.two {
  width: 65%;
 }
+
+img.three {
+ width: 18%;
+}
+
 </style>
 
 <style>
 h1 {text-align: center;}
+h2 {text-align: center;}
 p {text-align: center;}
 footer {text-align: center;}
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 7px 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 60px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #ff6347; 
+  color: white; 
+  border: 1px solid #ff6347;
+}
+
+.button1:hover {
+  background-color: #9d3e2d;
+  color: #ff6347;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(255,99,71,0.3);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 37px;
+  border: 1px solid #ff6347;
+  width: 60%;
+}
+
+.close {
+  color: #ff6347;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #9d3e2d;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 </style>
 
 </head>
 <body>
 
-<br><br><br><br><br><br><br>
+<br><br>
+<button id="myBtn" class="button button1" style="float:right">About Us</button>
 
-<h1> <img class="two" src="https://i.imgur.com/YGmSTvN.png" alt="AgriXP.in logo"> </h1> 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p style="color:#ff6347"><strong>About Us</strong><p>
+    <p>Build by a small and dedicated volunteer team after looking into the vast treasure of publicly available online educational resources which tend to fly under the radar for most of the world's population. The primary objective of eduCAT_XP is to provide the world with access to all such available online resources.</p>
+    <p>We're always open to new ideas, so feel free to contact us with any suggestions and/or feedback that you might have.</p>
+    <p>Thanks for using our search engine and enjoy while you learn.</p>
+    <br>
+    <p style="color:#ff6347">- The EduCAT_XP Team</p>
+    <br>
+    <h2><img class="three" src="https://i.imgur.com/yT5W3p8.png" alt="AgriXP.in logo"></h2>
+    
+  </div>
+
+</div>
+
+<script>
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<br><br><br><br>
+
+<h1> <img class="two" src="https://i.imgur.com/YGmSTvN.png" alt="EduCAT_XP logo"> </h1> 
 
 <form class="example" style="margin:auto;max-width:775px">
 <script async src="https://cse.google.com/cse.js?cx=011902979039264285117:d5jfxy9kcca"></script>
@@ -105,10 +221,11 @@ footer {text-align: center;}
 </form> 
 
 <p>
-<!-- <a href="https://www.facebook.com" class="fa fa-facebook" target="_blank"></a> -->
+<a href="https://www.facebook.com/Educat-XP-100646978429452/" class="fa fa-facebook" target="_blank"></a>
 <a href="https://twitter.com/EducatXp" class="fa fa-twitter" target="_blank"></a>
 <a href="https://www.linkedin.com/company/educat-xp" class="fa fa-linkedin" target="_blank"></a>
 <a href="https://www.instagram.com/educatxp/" class="fa fa-instagram" target="_blank"></a>
+<a href="mailto:educatxp@gmail.com" class="fa fa-envelope" target="_blank"></a>
 </p>
     
 </body>
